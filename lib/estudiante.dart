@@ -1,28 +1,27 @@
-class estudiante {
+class Estudiante {
   int? id;
   String nombre;
   String matricula;
 
-  estudiante({
+  Estudiante({
     this.id,
     required this.nombre,
-    required this.matricula
+    required this.matricula,
   });
 
-  Map<String, dynamic> toMap(){
+  Map<String, dynamic> toMap() {
     return {
       "id": id,
       "nombre": nombre,
-      "matricula": matricula
+      "matricula": matricula,
     };
   }
 
-  factory estudiante.fromMap(Map<String, dynamic> map) {
-    return estudiante(
+  factory Estudiante.fromMap(Map<String, dynamic> map) {
+    return Estudiante(
       id: map["id"],
       nombre: map["nombre"],
-      matricula: map["matricula"]
+      matricula: map["matricula"],
     );
   }
-  
 }
